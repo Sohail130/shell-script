@@ -4,13 +4,13 @@ Steps to perform to push files to github using git command:
 
 git init
 touch file_name --------> Write to a file
-git config --global user.name "sohel"
-git config --global user.email "khansh1515@gmail.com"
+git config --global user.name "usn_n"
+git config --global user.email "mail"
 git config --list
 git add .
 git commit -m "New JS server"
-git remote add origin https://github.com/Sohail130/shell-script.git
+git remote add origin https_url
 Generate a ssh key and add it on github-----> ssh and gpg keys (Option avaible under settings)
 Generate a token --- developer settings --------------> follow the steps for generating it. Valid for 30 days.
 
-git remote set-url origin https://Sohail130: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@github.com:Sohail130/shell-script.git
+git remote set-url origin https://git_usn_name:token:usn_name/git_repo_name
