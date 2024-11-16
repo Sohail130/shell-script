@@ -22,7 +22,7 @@ echo "--------------------" >> $LOGFILE
 
 # 3. Check for Any Available Package Updates (Debian/Ubuntu based)
 echo "Checking for available updates..." >> $LOGFILE
-apt update && apt list --upgradable >> $LOGFILE
+dnf check-update >> $LOGFILE 2>&1 >> $LOGFILE
 echo "--------------------" >> $LOGFILE
 
 # 4. Rotate Logs (Optional: Using logrotate if needed)
@@ -43,7 +43,7 @@ echo "--------------------" >> $LOGFILE
 
 # 7. Check for Orphaned Packages (Debian/Ubuntu)
 echo "Checking for orphaned packages..." >> $LOGFILE
-apt-get autoremove -y >> $LOGFILE
+dnf repoquery --unsatisfied >> $LOGFILE 2>&1 >> $LOGFILE
 echo "--------------------" >> $LOGFILE
 
 # 8. System Reboot (Optional, based on your requirements)
